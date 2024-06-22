@@ -1,2 +1,3 @@
 @import "./_grid.css";
-@import "./_colors.css";
+@import "./_variables.css";
+@import "./_global.css";

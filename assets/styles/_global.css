@@ -1,0 +1,11 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.primary-btn {
+  background-color: var(--pale-gold);
+  border-radius: 6px;
+  padding: 16px 40px;
+}
