@@ -26,6 +26,10 @@ To use this landing page, simply open index.html in a web browser.
 - HTML5
 - CSS3
 
+## Status
+
+develop
+
 ## Installation
 
 No installation required. Simply clone the repository:
