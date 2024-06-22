@@ -1,0 +1,22 @@
+:root {
+  /* colors */
+  --solid-white: #ffffff;
+  --thamar-black: #181818;
+  --pale-gold: #fdde67;
+  --solid-black: #000000;
+  --sweet-escape: #9747ff;
+  --palm-green: #1b2d22;
+  --mushiao-green: #2a4032;
+  --fresh-herbs: #3a5e46;
+  --hazy-mauve: #c5c2ca;
+  --solid-plaster: #e9e9e9;
+  --eerie-black: #1e1e1e;
+  --rise-shine: #ffeb9d;
+
+  /* gradients */
+  --mushiaogreen-freshherbs-lineargradient: linear-gradient(
+    110.6deg,
+    var(--mushiao-green) 0.81%,
+    var(--fresh-herbs) 100%
+  );
+}
