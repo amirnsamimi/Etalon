@@ -1,9 +1,9 @@
-@import url("/assets/styles/_grid.css");
-@import url("./_variables.css");
-@import url("./_global.css");
-@import url("./_flexbox.css");
-@import url("./_sizes.css");
-@import url("./_spacings.css");
+@import url("_grid.css");
+@import url("_variables.css");
+@import url("_global.css");
+@import url("_flexbox.css");
+@import url("_sizes.css");
+@import url("_spacings.css");
 
 body {
   background-image: var(--mushiaogreen-freshherbs-lineargradient);
