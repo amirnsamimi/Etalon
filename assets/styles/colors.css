@@ -1,0 +1,37 @@
+/* backgrounds */
+
+.bg-palegold {
+  background-color: var(--pale-gold);
+}
+
+.bg-themarablack {
+  background-color: var(--themara-black);
+}
+
+/* shadows */
+
+.shadow {
+  box-shadow: 0px 0px 4px var(--solid-black25);
+}
+
+/* text */
+
+.text-solidWhite {
+  color: var(--solid-white);
+}
+
+.text-solidWhite25 {
+  color: var(--solid-white25);
+}
+
+.text-solidWhite50 {
+  color: var(--solid-white50);
+}
+
+.text-solidWhite75 {
+  color: var(--solid-white75);
+}
+
+.text-themarablack {
+  color: var(--themara-black);
+}

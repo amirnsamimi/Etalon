@@ -4,3 +4,51 @@
 @import url("flexbox.css");
 @import url("sizes.css");
 @import url("spacings.css");
+@import url("position.css");
+@import url("colors.css");
+@import url("display.css");
+
+.max-w-screen {
+  max-width: 1440px;
+}
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.carousel {
+  background: var(--mushiaogreen-freshherbs-lineargradient);
+  min-height: 640px;
+}
+
+.carousel img {
+  width: 210px;
+  height: auto;
+}
+
+.carousel-image::after,
+.carousel-image::before {
+  content: "";
+  display: block;
+  width: 198px;
+  height: 198px;
+  background-color: var(--palm-green);
+  position: absolute;
+  border-radius: 100%;
+}
+
+.carousel-image::after {
+  transform: translateX(-50px);
+  bottom: 75px;
+}
+
+.carousel-image::before {
+  transform: translateX(50px);
+  bottom: 125px;
+}
+
+.brands img {
+  width: 100%;
+  height: auto;
+}

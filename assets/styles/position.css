@@ -1,0 +1,44 @@
+/* absolute */
+
+.absolute {
+  position: absolute;
+}
+
+/* relative */
+
+.relative {
+  position: relative;
+}
+
+/* fixed */
+
+.fixed {
+  position: fixed;
+}
+
+/* Top */
+
+.t-0 {
+  top: 0;
+}
+
+/* bottom */
+
+.b-0 {
+  bottom: 0;
+}
+
+/* left */
+.l-0 {
+  left: 0;
+}
+
+.r-0 {
+  right: 0;
+}
+
+/* texts */
+
+.text-center {
+  text-align: center;
+}

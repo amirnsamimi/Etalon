@@ -1,9 +1,13 @@
 :root {
   /* colors */
   --solid-white: #ffffff;
-  --thamar-black: #181818;
+  --solid-white25: rgba(255, 255, 255, 0.25);
+  --solid-white50: rgba(255, 255, 255, 0.5);
+  --solid-white75: rgba(255, 255, 255, 0.75);
+  --themara-black: #181818;
   --pale-gold: #fdde67;
   --solid-black: #000000;
+  --solid-black25: rgba(0, 0, 0, 0.25);
   --sweet-escape: #9747ff;
   --palm-green: #1b2d22;
   --mushiao-green: #2a4032;

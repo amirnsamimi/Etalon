@@ -13,4 +13,7 @@ html {
   background-color: var(--pale-gold);
   border-radius: 6px;
   padding: 16px 40px;
+  text-decoration: none;
+  color: var(--themara-black);
+  width: max-content;
 }

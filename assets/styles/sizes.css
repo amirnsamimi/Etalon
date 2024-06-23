@@ -9,3 +9,21 @@
 .h-full {
   height: 100%;
 }
+
+.h-48 {
+  height: 48px;
+}
+
+/* text */
+
+.text-2 {
+  font-size: 2rem;
+}
+
+.text-4 {
+  font-size: 4rem;
+}
+
+.italic {
+  font-style: italic;
+}
