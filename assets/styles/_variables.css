@@ -19,4 +19,10 @@
     var(--mushiao-green) 0.81%,
     var(--fresh-herbs) 100%
   );
+
+  --solidwhite-hazymauve: linear-gradient(
+    45deg,
+    var(--solid-white) 20%,
+    var(--hazy-mauve)
+  );
 }
