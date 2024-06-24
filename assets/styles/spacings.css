@@ -157,7 +157,8 @@
   padding: 1.5rem;
 }
 .py-6 {
-  padding: 1.5rem 0;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
 }
 
 .px-6 {
@@ -215,7 +216,8 @@
   padding: 2rem;
 }
 .py-8 {
-  padding: 2rem 0;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
 }
 
 .px-8 {
@@ -694,7 +696,8 @@
   margin: 3rem;
 }
 .my-12 {
-  margin: 3rem 0;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
 }
 
 .mx-12 {

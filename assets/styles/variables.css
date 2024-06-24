@@ -30,4 +30,10 @@
     var(--solid-white) 20%,
     var(--hazy-mauve)
   );
+
+  --palegold-freshherbs: linear-gradient(
+    45deg,
+    var(--pale-gold) 50%,
+    var(--fresh-herbs) 50%
+  );
 }

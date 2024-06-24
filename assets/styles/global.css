@@ -15,6 +15,11 @@ html {
   padding-bottom: 24px;
 }
 
+a {
+  text-decoration: none;
+  color: var(--themara-black);
+}
+
 .roboto {
   font-family: "roboto";
 }
@@ -26,6 +31,8 @@ html {
   text-decoration: none;
   color: var(--themara-black);
   width: max-content;
+  cursor: pointer;
+  transition: 500ms background-color;
 }
 
 .secondary-btn {
@@ -35,12 +42,37 @@ html {
   text-decoration: none;
   color: var(--solid-white);
   width: max-content;
+  cursor: pointer;
+  transition: 500ms background-color;
+}
+
+.secondary-btn:hover {
+  background-color: var(--eerie-black);
 }
 
 .cart-btn-square {
   background-color: var(--pale-gold);
   padding: 0.5rem;
   border-radius: 6px;
+  cursor: pointer;
+  transition: 500ms background-color;
+}
+
+.cart-btn-round {
+  background-color: var(--pale-gold);
+  padding: 0.5rem;
+  border-radius: 25px;
+  outline: none;
+  border: none;
+  display: flex;
+  cursor: pointer;
+  transition: 500ms background-color;
+}
+
+.primary-btn:hover,
+.cart-btn-round:hover,
+.cart-btn-square:hover {
+  background-color: var(--rise-shine);
 }
 
 /* products tags and prices */

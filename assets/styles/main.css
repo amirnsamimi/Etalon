@@ -10,7 +10,7 @@
 @import url("text.css");
 
 .max-w-screen {
-  max-width: 1440px;
+  max-width: 1540px;
 }
 
 .carousel {
@@ -54,11 +54,11 @@
 .collection-card-primary {
   background-color: var(--hazy-mauve);
   border-radius: 24px;
-  min-height: 410px;
+  height: 410px;
 }
 
 .collection-card-primary img {
-  max-height: 340px;
+  height: 85%;
 }
 
 .collection-card-secondary {
@@ -68,7 +68,11 @@
 }
 
 .collection-card-secondary img {
-  max-height: 220px;
+  height: 95%;
+}
+.collection-card-text {
+  height: 100%;
+  justify-content: space-between;
 }
 
 /* bestsellers  */
@@ -82,12 +86,23 @@
   width: 225px;
   background-color: var(--solid-white);
   border-radius: 24px;
+  perspective: 500px;
 }
 
 .bestseller-product img {
   width: 100%;
-  height: 100%;
+  height: auto;
+  transition: 500ms;
 }
+
+.bestseller-product img:hover {
+  transform: rotateY(20deg);
+}
+
+.bestseller-loadmore {
+  display: none;
+}
+
 /* fav-ckeckbox */
 
 .favorite input {
@@ -97,6 +112,7 @@
 .favorite input ~ svg {
   fill: transparent;
   stroke: var(--themara-black);
+  transition: 500ms fill;
 }
 
 .favorite input:checked ~ svg {
@@ -120,4 +136,117 @@
   font-weight: 200;
   font-family: "roboto";
   padding: 12px 0;
+}
+
+/* sm responsive design */
+#nav-sm {
+  display: none;
+  font-size: 1.25rem;
+}
+
+#nav-sm a {
+  color: var(--solid-white25);
+  transition: 500ms;
+}
+
+#nav-sm a:hover {
+  color: var(--solid-white);
+}
+
+#nav-sm [active] {
+  color: var(--solid-white);
+}
+
+#nav-xs a {
+  opacity: 0.75;
+  transition: 500ms;
+}
+
+#nav-xs a:hover {
+  opacity: 1;
+  transition: 500ms;
+}
+
+#nav-xs [active] {
+  opacity: 1;
+}
+
+.shoe-img {
+  display: none;
+}
+
+@media screen and (min-width: 520px) {
+  .collection-container {
+    flex-direction: row;
+  }
+
+  .collection-card-primary {
+    height: 300px;
+  }
+
+  .collection-card-secondary {
+    height: 300px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  #nav-xs {
+    display: none;
+  }
+
+  body,
+  html {
+    padding-bottom: 0;
+  }
+  #nav-sm {
+    display: flex;
+  }
+
+  .carousel {
+    padding-top: 5rem;
+  }
+
+  .collection-card-primary {
+    height: 400px;
+  }
+
+  .collection-card-secondary {
+    height: 400px;
+  }
+
+  .bestseller-product {
+    height: 275px;
+    width: 275px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .collection-card-primary {
+    height: 550px;
+  }
+
+  .collection-card-secondary {
+    height: 550px;
+  }
+
+  .bestseller-product {
+    height: 350px;
+    width: 305px;
+  }
+}
+
+@media screen and (min-width: 1540px) {
+  .bestseller-loadmore {
+    display: flex;
+  }
+
+  .timer-container {
+    min-height: 450px;
+    border-left: 250px var(--pale-gold) solid;
+  }
+
+  .shoe-img {
+    display: flex;
+    left: -250px;
+  }
 }
