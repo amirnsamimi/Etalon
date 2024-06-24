@@ -13,8 +13,11 @@
   max-width: 1540px;
 }
 
-.carousel {
+.carousel-container {
   background: var(--mushiaogreen-freshherbs-lineargradient);
+}
+
+.carousel {
   min-height: 640px;
 }
 
@@ -175,7 +178,19 @@
   display: none;
 }
 
+.price-tag {
+  display: none;
+}
+
+.price-tag-transparent {
+  display: none;
+}
+
 @media screen and (min-width: 520px) {
+  .carousel h1 {
+    font-size: 6rem;
+  }
+
   .collection-container {
     flex-direction: row;
   }
@@ -206,6 +221,30 @@
     padding-top: 5rem;
   }
 
+  .carousel h1 {
+    font-size: 8rem;
+  }
+
+  .carousel-image {
+    justify-content: flex-end;
+    right: 10rem;
+  }
+
+  .carousel img {
+    height: 520px;
+    width: auto;
+  }
+
+  .carousel-image::after {
+    height: 275px;
+    width: 275px;
+  }
+  .carousel-image::before {
+    height: 275px;
+    width: 275px;
+    bottom: 150px;
+  }
+
   .collection-card-primary {
     height: 400px;
   }
@@ -223,6 +262,21 @@
 @media screen and (min-width: 1024px) {
   .collection-card-primary {
     height: 550px;
+  }
+
+  .price-tag {
+    display: block;
+    position: absolute;
+    right: 200px;
+    top: 100px;
+    z-index: 50;
+  }
+
+  .price-tag-transparent {
+    display: block;
+    position: absolute;
+    right: 250px;
+    top: 50px;
   }
 
   .collection-card-secondary {

@@ -108,3 +108,10 @@ a {
 .product:has(.sale) .sale-tag {
   display: block;
 }
+
+.price-tag {
+  padding: 25px;
+  background-color: var(--pale-gold);
+  border-radius: 100px;
+  text-overflow: clip;
+}
