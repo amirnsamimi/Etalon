@@ -102,3 +102,22 @@
 .favorite input:checked ~ svg {
   fill: var(--themara-black);
 }
+
+/* times */
+
+.time-number {
+  background-color: var(--mushiao-green);
+  line-height: 32px;
+  font-size: 24px;
+  font-weight: 700;
+  font-family: "roboto";
+  padding: 12px 20px;
+  border-radius: 8px;
+}
+
+.time-desc {
+  font-size: 12px;
+  font-weight: 200;
+  font-family: "roboto";
+  padding: 12px 0;
+}

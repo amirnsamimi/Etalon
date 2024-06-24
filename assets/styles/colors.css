@@ -8,6 +8,10 @@
   background-color: var(--themara-black);
 }
 
+.bg-freshherbs {
+  background-color: var(--fresh-herbs);
+}
+
 /* shadows */
 
 .shadow {
