@@ -97,11 +97,13 @@
   padding: 1rem;
 }
 .py-4 {
-  padding: 1rem 0;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 
 .px-4 {
-  padding: 0 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 .pr-4 {

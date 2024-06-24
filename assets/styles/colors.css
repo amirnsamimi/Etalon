@@ -35,3 +35,9 @@
 .text-themarablack {
   color: var(--themara-black);
 }
+
+/* opacity */
+
+.opacity-6 {
+  opacity: 0.6;
+}

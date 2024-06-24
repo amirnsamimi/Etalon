@@ -68,3 +68,15 @@
 .text-left {
   text-align: left;
 }
+
+/* overflow */
+
+.overflow-scrollX {
+  overflow-y: scroll;
+  cursor: grab;
+  z-index: 10;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}

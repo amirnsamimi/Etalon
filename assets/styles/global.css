@@ -15,6 +15,10 @@ html {
   padding-bottom: 24px;
 }
 
+.roboto {
+  font-family: "roboto";
+}
+
 .primary-btn {
   background-color: var(--pale-gold);
   border-radius: 6px;
@@ -31,4 +35,44 @@ html {
   text-decoration: none;
   color: var(--solid-white);
   width: max-content;
+}
+
+.cart-btn-square {
+  background-color: var(--pale-gold);
+  padding: 0.5rem;
+  border-radius: 6px;
+}
+
+/* products tags and prices */
+
+.sale {
+  color: var(--solid-black25);
+  text-decoration: line-through;
+}
+
+.price ~ span {
+  visibility: hidden;
+}
+
+.price.sale ~ span {
+  visibility: visible;
+}
+
+.sale-tag {
+  width: max-content;
+  height: max-content;
+  font-family: "roboto";
+  min-width: 40px;
+  padding: 3px 6px;
+  font-size: 0.75rem;
+  font-weight: 200;
+  border-radius: 6px;
+  text-align: center;
+  color: var(--solid-white);
+  background-color: var(--fresh-herbs);
+  display: none;
+}
+
+.product:has(.sale) .sale-tag {
+  display: block;
 }
