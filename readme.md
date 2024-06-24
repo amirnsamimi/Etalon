@@ -19,7 +19,14 @@ This project is an online responsive e-commerce landing page built entirely with
 
 To use this landing page, simply open index.html in a web browser.
 
-## Screen shots
+## Design Screen shots
+
+![desktop version](./assets/images/desktop.png)
+![mobile version](./assets/images/mobile-version.png)
+
+## Some Feature Screen shots
+
+![sale tag](./assets/images/sale-tag.png)
 
 ## Technologies Used
 
