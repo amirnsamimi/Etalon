@@ -52,6 +52,65 @@
   height: auto;
 }
 
+.carousel-indicators {
+  justify-content: center;
+  width: 100%;
+  align-items: flex-end;
+  bottom: 40px;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  gap: 20px;
+  position: absolute;
+  right: 0;
+  z-index: 10;
+}
+
+.carousel-indicators ol {
+  height: 16px;
+  width: 16px;
+  background-color: var(--solid-white25);
+  border-radius: 100px;
+  transition: 500ms;
+}
+
+.carousel-indicators ol:hover {
+  height: 24px;
+  width: 24px;
+  background-color: var(--solid-white75);
+  border-radius: 100px;
+}
+
+.carousel-indicators ol[active] {
+  height: 24px;
+  width: 24px;
+  background-color: var(--solid-white);
+  border-radius: 100px;
+}
+
+.carousel-controllers {
+  display: none;
+  z-index: 10;
+  position: absolute;
+  bottom: 32px;
+}
+
+.carousel-controllers .arrow-right {
+  transform: rotate(180deg);
+  transition: 500ms;
+}
+
+.carousel-controllers .arrow-left {
+  opacity: 0.3;
+  transition: 500ms;
+}
+
+.carousel-controllers .arrow-left:hover,
+.carousel-controllers .arrow-right:hover {
+  opacity: 1;
+  fill: var(--rise-shine);
+}
+
 /* collection cards */
 
 .collection-card-primary {
@@ -132,6 +191,12 @@
   font-family: "roboto";
   padding: 12px 20px;
   border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.timer h2 {
+  text-align: center;
 }
 
 .time-desc {
@@ -202,6 +267,10 @@
   .collection-card-secondary {
     height: 300px;
   }
+
+  .carousel-controllers {
+    display: none;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -257,6 +326,35 @@
     height: 275px;
     width: 275px;
   }
+
+  .time-number {
+    width: 100px;
+    height: 70px;
+    font-size: 32px;
+  }
+  .timer h2 {
+    text-align: center;
+    font-size: 32px;
+  }
+
+  .time-desc {
+    font-size: 16px;
+  }
+
+  .carousel-indicators {
+    display: grid;
+    justify-items: center;
+    justify-content: end;
+    bottom: 50%;
+    right: 0;
+    transform: translateY(50%);
+    z-index: 40;
+  }
+
+  .carousel-controllers {
+    display: flex;
+    gap: 12px;
+  }
 }
 
 @media screen and (min-width: 1024px) {
@@ -287,6 +385,20 @@
     height: 350px;
     width: 305px;
   }
+
+  .time-number {
+    width: 120px;
+    height: 90px;
+    font-size: 48px;
+  }
+  .timer h2 {
+    text-align: center;
+    font-size: 48px;
+  }
+
+  .time-desc {
+    font-size: 18px;
+  }
 }
 
 @media screen and (min-width: 1540px) {
@@ -296,11 +408,25 @@
 
   .timer-container {
     min-height: 450px;
-    border-left: 250px var(--pale-gold) solid;
+    border-left: 400px var(--pale-gold) solid;
+  }
+
+  .time-number {
+    width: 150px;
+    height: 110px;
+    font-size: 64px;
+  }
+  .timer h2 {
+    text-align: left;
+    font-size: 64px;
+  }
+
+  .time-desc {
+    font-size: 24px;
   }
 
   .shoe-img {
-    display: flex;
-    left: -250px;
+    display: block;
+    left: -400px;
   }
 }

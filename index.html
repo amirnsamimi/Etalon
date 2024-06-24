@@ -35,12 +35,12 @@
       >
         <ul class="flex p-4 items-center justify-between w-full max-w-screen">
           <li>
-            <a href="#" title="to-contact-us" 
+            <a href="#" title="to-contact-us"
               ><img src="./assets/icons/phone.svg" alt="phone-icon"
             /></a>
           </li>
           <li>
-            <a href="#" title="to-new" 
+            <a href="#" title="to-new"
               ><img src="./assets/icons/medal.svg" alt="medal-icon"
             /></a>
           </li>
@@ -55,7 +55,7 @@
             /></a>
           </li>
           <li>
-            <a href="#" title="to-basket" 
+            <a href="#" title="to-basket"
               ><img src="./assets/icons/basket.svg" alt="cart-icon"
             /></a>
           </li>
@@ -69,16 +69,16 @@
           <h2 class="text-2 black text-solidWhite">Etalon</h2>
           <ul class="flex p-4 items-center gap-8">
             <li>
-              <a href="#" title="to-home" active >Home</a>
+              <a href="#" title="to-home" active>Home</a>
             </li>
             <li>
-              <a href="#" title="to-store" >Store</a>
+              <a href="#" title="to-store">Store</a>
             </li>
             <li>
-              <a href="#" title="to-new" > New</a>
+              <a href="#" title="to-new"> New</a>
             </li>
             <li>
-              <a href="#" title="to-contact-us" > Contact</a>
+              <a href="#" title="to-contact-us"> Contact</a>
             </li>
           </ul>
           <button class="cart-btn-round">
@@ -94,9 +94,11 @@
     </header>
     <main>
       <section
-        class="container carousel-container px-4  flex justify-center align-start"
+        class="container carousel-container px-4 flex justify-center align-start"
       >
-        <div class="max-w-screen carousel flex w-full relative justify-center align-start">
+        <div
+          class="max-w-screen carousel flex w-full relative justify-center align-start"
+        >
           <div class="grid gap-4 pt-8 z-20 relative w-full">
             <h2 class="text-2 text-solidWhite25 italic">2022</h2>
             <h1 class="text-solidWhite text-4 font-black">
@@ -109,24 +111,40 @@
               title="open product collection"
               class="primary-btn mt-4"
             >
-              Open Collection</a>
+              Open Collection</a
+            >
           </div>
-          <div
-            class="carousel-image absolute b-0 w-full  flex justify-center"
-          >
+          <div class="carousel-image absolute b-0 w-full flex justify-center">
             <img
               src="./assets/images/models/model-3.png"
               alt="green-jacket-model"
               class="z-10 block"
             />
             <div>
-              <div class="bold price-tag">40%<br>OFF</div>
-              <div class="bold price-tag-transparent text-solidWhite text-2">$299</div>
+              <div class="bold price-tag">40%<br />OFF</div>
+              <div
+                class="bold price-tag-transparent text-solidWhite text-2 absolute"
+              >
+                $299
+              </div>
             </div>
+          </div>
+          <ul class="carousel-indicators">
+            <ol active></ol>
+            <ol></ol>
+            <ol></ol>
+          </ul>
+          <div class="carousel-controllers">
+            <svg width="37px" height="36px" class="arrow-left">
+              <use xlink:href="./assets/icons/sprite.svg#icon-arrow"></use>
+            </svg>
+            <svg width="37px" height="36px" class="arrow-right">
+              <use xlink:href="./assets/icons/sprite.svg#icon-arrow"></use>
+            </svg>
           </div>
         </div>
       </section>
-     
+
       <section
         class="container brands bg-themarablack flex justify-center align-start"
       >
@@ -204,11 +222,9 @@
           </section>
         </div>
       </div>
-      <section
-        class="container bestseller-container  px-4 py-4"
-      >
+      <section class="container bestseller-container px-4 py-4">
         <div class="flex items-center">
-          <div class="max-w-screen w-full  mx-auto">
+          <div class="max-w-screen w-full mx-auto">
             <h2 class="text-2 pt-4 pb-8">Best Sellers</h2>
             <div class="overflow-scrollX">
               <ul class="relative flex justify-between gap-8">
@@ -336,43 +352,47 @@
             </div>
           </div>
         </div>
-        <div class="max-w-screen flex bestseller-loadmore mx-auto  my-12 justify-center">
-        <button class="secondary-btn ">Load More Products</div>
+        <div
+          class="max-w-screen flex bestseller-loadmore mx-auto my-12 justify-center"
+        >
+          <button class="secondary-btn">Load More Products</button>
         </div>
       </section>
-      <section
-        class=" flex justify-center items-center bg-palegold-freshherbs "
-      >
-   
-     <div class=" timer-container max-w-screen relative flex items-center w-full bg-freshherbs">
-      <div class="shoe-img absolute py-8 px-4">
-        <div class="text-4">70%</div>
-        <img src="./assets/images/products/shoe.png" alt="shoe">
-      </div>
+      <section class="flex justify-center items-center bg-palegold-freshherbs">
+        <div
+          class="timer-container max-w-screen relative flex items-center w-full bg-freshherbs"
+        >
+          <div class="shoe-img absolute py-8 px-4">
+            <div class="text-4 bold">70% OFF</div>
+            <img src="./assets/images/products/shoe.png" alt="shoe" />
+          </div>
 
-      <div class=" w-full flex flex-col  h-full py-8 justify-center items-center text-solidWhite">
-   
-        <h2 class="text-2 bold pb-8">Sale ends soon</h2>
-        <div class="flex items-center gap-3 text-center">
-          <div class="grid">
-            <span class="time-number">3</span>
-            <span class="time-desc">Days</span>
-          </div>
-          <div class="grid">
-            <span class="time-number">23</span>
-            <span class="time-desc">Hours</span>
-          </div>
-          <div class="grid">
-            <span class="time-number">15</span
-            ><span class="time-desc">Minutes</span>
-          </div>
-          <div class="grid">
-            <span class="time-number">33</span>
-            <span class="time-desc">Seconds</span>
+          <div
+            class="w-full flex flex-col h-full py-8 justify-center items-center text-solidWhite"
+          >
+            <div class="timer">
+              <h2 class="text-2 bold pb-8">Sale ends soon</h2>
+              <div class="flex items-center gap-3 text-center">
+                <div class="grid">
+                  <span class="time-number">3</span>
+                  <span class="time-desc">Days</span>
+                </div>
+                <div class="grid">
+                  <span class="time-number">23</span>
+                  <span class="time-desc">Hours</span>
+                </div>
+                <div class="grid">
+                  <span class="time-number">15</span
+                  ><span class="time-desc">Minutes</span>
+                </div>
+                <div class="grid">
+                  <span class="time-number">33</span>
+                  <span class="time-desc">Seconds</span>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-    </div>
       </section>
     </main>
     <footer
