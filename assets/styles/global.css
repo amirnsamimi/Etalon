@@ -4,9 +4,15 @@
   padding: 0;
 }
 
+.container {
+  /* width: 100%; */
+  margin: 0 auto;
+}
+
 body,
 html {
-  font-family: "lato";
+  font-family: "lato", "Roboto", sans-serif, serif;
+  padding-bottom: 24px;
 }
 
 .primary-btn {
@@ -15,5 +21,14 @@ html {
   padding: 16px 40px;
   text-decoration: none;
   color: var(--themara-black);
+  width: max-content;
+}
+
+.secondary-btn {
+  background-color: var(--themara-black);
+  border-radius: 6px;
+  padding: 16px 40px;
+  text-decoration: none;
+  color: var(--solid-white);
   width: max-content;
 }

@@ -62,7 +62,7 @@
 }
 
 .basis-12 {
-  flex-basis: calc((100% / 12) * 12);
+  flex-basis: 100%;
 }
 
 /* flex-direction */

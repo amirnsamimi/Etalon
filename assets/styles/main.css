@@ -1,20 +1,16 @@
+@import url("global.css");
 @import url("grid.css");
 @import url("variables.css");
-@import url("global.css");
 @import url("flexbox.css");
 @import url("sizes.css");
 @import url("spacings.css");
 @import url("position.css");
 @import url("colors.css");
 @import url("display.css");
+@import url("text.css");
 
 .max-w-screen {
   max-width: 1440px;
-}
-
-.container {
-  width: 100%;
-  margin: 0 auto;
 }
 
 .carousel {
@@ -51,4 +47,26 @@
 .brands img {
   width: 100%;
   height: auto;
+}
+
+/* collection cards */
+
+.collection-card-primary {
+  background-color: var(--hazy-mauve);
+  border-radius: 24px;
+  min-height: 410px;
+}
+
+.collection-card-primary img {
+  max-height: 340px;
+}
+
+.collection-card-secondary {
+  background-color: var(--pale-gold);
+  border-radius: 24px;
+  height: 250px;
+}
+
+.collection-card-secondary img {
+  max-height: 220px;
 }

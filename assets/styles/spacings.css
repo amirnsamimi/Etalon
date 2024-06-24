@@ -455,11 +455,13 @@
   margin: 1rem;
 }
 .my-4 {
-  margin: 1rem 0;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
 .mx-4 {
-  margin: 0 1rem;
+  margin-right: 1rem;
+  margin-left: 1rem;
 }
 
 .mr-4 {
@@ -484,11 +486,13 @@
   margin: 1.25rem;
 }
 .my-5 {
-  margin: 1.25rem 0;
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
 }
 
 .mx-5 {
-  margin: 0 1.25rem;
+  margin-right: 1.25rem;
+  margin-left: 1.25rem;
 }
 
 .mr-5 {
@@ -571,7 +575,8 @@
   margin: 2rem;
 }
 .my-8 {
-  margin: 2rem 0;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
 }
 
 .mx-8 {

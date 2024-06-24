@@ -22,10 +22,18 @@
   top: 0;
 }
 
+.t-4 {
+  top: 1rem;
+}
+
 /* bottom */
 
 .b-0 {
   bottom: 0;
+}
+
+.b-4 {
+  bottom: 1rem;
 }
 
 /* left */
@@ -33,12 +41,30 @@
   left: 0;
 }
 
+.l-4 {
+  left: 1rem;
+}
+
+/* right */
+
 .r-0 {
   right: 0;
+}
+
+.r-4 {
+  right: 1rem;
 }
 
 /* texts */
 
 .text-center {
   text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-left {
+  text-align: left;
 }
