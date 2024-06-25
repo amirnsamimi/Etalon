@@ -360,6 +360,7 @@
 @media screen and (min-width: 1024px) {
   .collection-card-primary {
     height: 550px;
+    width: 600px;
   }
 
   .price-tag {
