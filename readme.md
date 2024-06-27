@@ -26,6 +26,8 @@ To use this landing page, simply open index.html in a web browser.
 
 ## Some Feature Screen shots
 
+![Typewriter](./assets/images/typewriter.png)
+![carousel](./assets/images/carousel.png)
 ![sale tag](./assets/images/sale-tag.png)
 
 ## Technologies Used
