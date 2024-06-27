@@ -63,9 +63,10 @@
   gap: 20px;
   position: absolute;
   right: 0;
+
   z-index: 10;
 }
-
+/* 
 .carousel-indicators ol {
   height: 16px;
   width: 16px;
@@ -86,13 +87,92 @@
   width: 24px;
   background-color: var(--solid-white);
   border-radius: 100px;
+} */
+
+.carousel-indicators input {
+  display: none;
 }
+
+.carousel-indicators input ~ div {
+  height: 16px;
+  width: 16px;
+  background-color: var(--solid-white25);
+  border-radius: 100px;
+  transition: 500ms;
+  cursor: pointer;
+}
+
+.carousel-indicators input ~ div:hover {
+  height: 24px;
+  width: 24px;
+  background-color: var(--solid-white75);
+  border-radius: 100px;
+}
+
+.carousel-indicators input:checked ~ div {
+  height: 24px;
+  width: 24px;
+  background-color: var(--solid-white);
+  border-radius: 100px;
+}
+
+/* testing c-image */
+
+.carousel-image-container {
+  width: 100%;
+  height: auto;
+}
+
+.carousel-image-container img {
+  margin-inline: auto;
+  right: 0;
+  left: 0;
+}
+
+#carousel-image-2 {
+  height: 360px;
+  width: auto;
+}
+
+#carousel-image-1,
+#carousel-image-2,
+#carousel-image-3 {
+  visibility: hidden;
+  transition: 500ms bottom, 1s opacity cubic-bezier(1, 0, 0, 1);
+  opacity: 0;
+  bottom: -100%;
+}
+
+.carousel-container:has(input[id="carousel-image-1-active"]:checked)
+  #carousel-image-1 {
+  visibility: visible;
+  opacity: 1;
+  bottom: 0;
+}
+
+.carousel-container:has(input[id="carousel-image-2-active"]:checked)
+  #carousel-image-2 {
+  visibility: visible;
+  right: 0;
+  opacity: 1;
+  bottom: 0;
+}
+
+.carousel-container:has(input[id="carousel-image-3-active"]:checked)
+  #carousel-image-3 {
+  visibility: visible;
+  opacity: 1;
+  bottom: 0;
+}
+
+/* controllers */
 
 .carousel-controllers {
   display: none;
   z-index: 10;
   position: absolute;
   bottom: 32px;
+  cursor: pointer;
 }
 
 .carousel-controllers .arrow-right {
@@ -249,6 +329,7 @@
 
 .price-tag-transparent {
   display: none;
+  z-index: 10;
 }
 
 @media screen and (min-width: 520px) {
@@ -274,6 +355,17 @@
 }
 
 @media screen and (min-width: 768px) {
+  .carousel-image-container img {
+    margin-inline: auto;
+    right: 0;
+    left: auto;
+  }
+
+  #carousel-image-2 {
+    height: 520px;
+    width: auto;
+  }
+
   #nav-xs {
     display: none;
   }
@@ -341,6 +433,27 @@
     font-size: 16px;
   }
 
+  .carousel-container:has(input[id="carousel-image-1-active"]:checked)
+    #carousel-image-1 {
+    display: block;
+    transform: translateX(25px);
+    bottom: 0;
+  }
+
+  .carousel-container:has(input[id="carousel-image-2-active"]:checked)
+    #carousel-image-2 {
+    display: block;
+    right: 0;
+    bottom: 0;
+    transform: translateX(75px);
+  }
+
+  .carousel-container:has(input[id="carousel-image-3-active"]:checked)
+    #carousel-image-3 {
+    display: block;
+    bottom: 0;
+  }
+
   .carousel-indicators {
     display: grid;
     justify-items: center;
@@ -361,6 +474,11 @@
   .collection-card-primary {
     height: 550px;
     width: 600px;
+  }
+
+  .carousel-image-container {
+    min-width: 600px;
+    min-height: 550px;
   }
 
   .price-tag {

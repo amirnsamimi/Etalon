@@ -100,7 +100,7 @@
           class="max-w-screen carousel flex w-full relative justify-center align-start"
         >
           <div class="grid gap-4 pt-8 z-20 relative w-full">
-            <h2 class="text-2 text-solidWhite25 italic">2022</h2>
+            <h2 class="text-2 text-solidWhite25 italic">2024</h2>
             <h1 class="text-solidWhite text-4 font-black">
               Autumn <br />
               Jackets
@@ -115,11 +115,26 @@
             >
           </div>
           <div class="carousel-image absolute b-0 w-full flex justify-center">
-            <img
-              src="./assets/images/models/model-3.png"
-              alt="green-jacket-model"
-              class="z-10 block"
-            />
+            <div class="z-10 block relative carousel-image-container">
+              <img
+                src="./assets/images/models/model-1.png"
+                alt="green-jacket-model"
+                id="carousel-image-1"
+                class="absolute r-0"
+              />
+              <img
+                src="./assets/images/models/model-2.png"
+                alt="green-jacket-model"
+                id="carousel-image-2"
+                class="absolute r-0"
+              />
+              <img
+                src="./assets/images/models/model-3.png"
+                alt="green-jacket-model"
+                id="carousel-image-3"
+                class="absolute r-0"
+              />
+            </div>
             <div>
               <div class="bold price-tag">40%<br />OFF</div>
               <div
@@ -129,11 +144,33 @@
               </div>
             </div>
           </div>
-          <ul class="carousel-indicators">
-            <ol active></ol>
-            <ol></ol>
-            <ol></ol>
-          </ul>
+          <div class="carousel-indicators">
+            <label>
+              <input
+                type="radio"
+                checked
+                name="carouselIndicator"
+                id="carousel-image-3-active"
+              />
+              <div></div>
+            </label>
+            <label>
+              <input
+                type="radio"
+                name="carouselIndicator"
+                id="carousel-image-2-active"
+              />
+              <div></div>
+            </label>
+            <label>
+              <input
+                type="radio"
+                name="carouselIndicator"
+                id="carousel-image-1-active"
+              />
+              <div></div>
+            </label>
+          </div>
           <div class="carousel-controllers">
             <svg width="37px" height="36px" class="arrow-left">
               <use xlink:href="./assets/icons/sprite.svg#icon-arrow"></use>
