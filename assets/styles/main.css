@@ -673,10 +673,6 @@
   .carousel-controllers {
     display: none;
   }
-
-  .typewriter {
-    width: max-content;
-  }
 }
 
 @media screen and (min-width: 768px) {
@@ -684,6 +680,10 @@
     margin-inline: auto;
     right: 0;
     left: auto;
+  }
+
+  .typewriter {
+    width: max-content;
   }
 
   .carousel h1,
