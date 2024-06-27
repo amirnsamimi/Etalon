@@ -143,14 +143,20 @@
   bottom: -100%;
 }
 
+.carousel-container:has(input[id="back-image-1"]:checked) #carousel-image-1,
 .carousel-container:has(input[id="carousel-image-1-active"]:checked)
-  #carousel-image-1 {
+  #carousel-image-1,
+.carousel-container:has(input[id="to-image-1"]:checked) #carousel-image-1 {
   visibility: visible;
   opacity: 1;
   bottom: 0;
 }
 
-.carousel-container:has(input[id="carousel-image-2-active"]:checked)
+.carousel-container:has(
+    input[id="back-image-2"]:checked,
+    input[id="carousel-image-2-active"]:checked,
+    input[id="to-image-2"]:checked
+  )
   #carousel-image-2 {
   visibility: visible;
   right: 0;
@@ -158,8 +164,28 @@
   bottom: 0;
 }
 
-.carousel-container:has(input[id="carousel-image-3-active"]:checked)
+.carousel-container:has(
+    input[id="back-image-2"]:checked,
+    input[id="carousel-image-2-active"]:checked,
+    input[id="to-image-2"]:checked
+  )
+  #carousel-image-1,
+.carousel-container:has(
+    input[id="back-image-2"]:checked,
+    input[id="carousel-image-2-active"]:checked,
+    input[id="to-image-2"]:checked
+  )
   #carousel-image-3 {
+  visibility: hidden;
+  right: 0;
+  opacity: 1;
+  bottom: 0;
+}
+
+.carousel-container:has(input[id="carousel-image-3-active"]:checked)
+  #carousel-image-3,
+.carousel-container:has(input[id="back-image-3"]:checked) #carousel-image-3,
+.carousel-container:has(input[id="to-image-3"]:checked) #carousel-image-3 {
   visibility: visible;
   opacity: 1;
   bottom: 0;
@@ -175,13 +201,109 @@
   cursor: pointer;
 }
 
-.carousel-controllers .arrow-right {
+.carousel-controllers input {
+  display: none;
+}
+
+/* default back image 3 on page load */
+#back-image-1-arrow,
+#back-image-2-arrow {
+  display: none;
+}
+
+/* default to image 2 on page load */
+#to-image-1-arrow,
+#to-image-3-arrow {
+  display: none;
+}
+
+/* default on load accessible button on image 1*/
+.carousel-container:has(input[id="to-image-2"]:checked) #to-image-2-arrow,
+.carousel-container:has(input[id="to-image-2"]:checked) #to-image-1-arrow,
+.carousel-container:has(input[id="to-image-2"]:checked) #back-image-2-arrow,
+.carousel-container:has(input[id="to-image-2"]:checked) #back-image-3-arrow {
+  display: none;
+}
+
+.carousel-container:has(input[id="back-image-3"]:checked) #back-image-3-arrow,
+.carousel-container:has(input[id="back-image-3"]:checked) #back-image-2-arrow,
+.carousel-container:has(input[id="back-image-3"]:checked) #to-image-2-arrow,
+.carousel-container:has(input[id="back-image-3"]:checked) #to-image-1-arrow {
+  display: none;
+}
+
+.carousel-container:has(input[id="to-image-2"]:checked) #to-image-3-arrow,
+.carousel-container:has(input[id="to-image-2"]:checked) #back-image-1-arrow,
+.carousel-container:has(input[id="back-image-3"]:checked) #to-image-1-arrow,
+.carousel-container:has(input[id="back-image-3"]:checked) #back-image-2-arrow {
+  display: inline;
+}
+
+/* default on load accessible button on image 2 */
+
+.carousel-container:has(input[id="to-image-3"]:checked) #to-image-2-arrow,
+.carousel-container:has(input[id="to-image-3"]:checked) #to-image-1-arrow,
+.carousel-container:has(input[id="to-image-3"]:checked) #back-image-2-arrow,
+.carousel-container:has(input[id="to-image-3"]:checked) #back-image-3-arrow {
+  display: none;
+}
+
+.carousel-container:has(input[id="back-image-1"]:checked) #back-image-2-arrow,
+.carousel-container:has(input[id="back-image-1"]:checked) #back-image-3-arrow,
+.carousel-container:has(input[id="back-image-1"]:checked) #to-image-1-arrow,
+.carousel-container:has(input[id="back-image-1"]:checked) #to-image-2-arrow {
+  display: none;
+}
+
+.carousel-container:has(input[id="to-image-3"]:checked) #to-image-1-arrow,
+.carousel-container:has(input[id="to-image-3"]:checked) #back-image-2-arrow,
+.carousel-container:has(input[id="back-image-1"]:checked) #to-image-2-arrow,
+.carousel-container:has(input[id="back-image-1"]:checked) #back-image-3-arrow {
+  display: inline;
+}
+
+/* default on load accessible button on image 3 */
+
+.carousel-container:has(input[id="to-image-1"]:checked) #to-image-2-arrow,
+.carousel-container:has(input[id="to-image-1"]:checked) #to-image-3-arrow,
+.carousel-container:has(input[id="to-image-1"]:checked) #back-image-3-arrow,
+.carousel-container:has(input[id="to-image-1"]:checked) #back-image-1-arrow {
+  display: none;
+}
+
+.carousel-container:has(input[id="back-image-2"]:checked) #back-image-1-arrow,
+.carousel-container:has(input[id="back-image-2"]:checked) #back-image-3-arrow,
+.carousel-container:has(input[id="back-image-2"]:checked) #to-image-2-arrow,
+.carousel-container:has(input[id="back-image-2"]:checked) #to-image-3-arrow {
+  display: none;
+}
+
+.carousel-container:has(input[id="to-image-1"]:checked) #to-image-2-arrow,
+.carousel-container:has(input[id="to-image-1"]:checked) #back-image-3-arrow,
+.carousel-container:has(input[id="back-image-2"]:checked) #to-image-3-arrow,
+.carousel-container:has(input[id="back-image-2"]:checked) #back-image-1-arrow {
+  display: inline;
+}
+
+.carousel-container .carousel-controllers .arrow-right {
   transform: rotate(180deg);
   transition: 500ms;
+  opacity: 0.3;
 }
 
 .carousel-controllers .arrow-left {
   opacity: 0.3;
+  transition: 500ms;
+}
+
+.carousel-controllers .arrow-left-active {
+  opacity: 1;
+  transition: 500ms;
+}
+
+.carousel-controllers .arrow-right-active {
+  transform: rotate(180deg);
+  opacity: 1;
   transition: 500ms;
 }
 
