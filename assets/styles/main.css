@@ -689,10 +689,6 @@
     left: auto;
   }
 
-  .typewriter {
-    width: max-content;
-  }
-
   .carousel h1,
   .carousel h2 {
     font-size: 8rem;
@@ -817,6 +813,10 @@
 }
 
 @media screen and (min-width: 1024px) {
+  .typewriter {
+    width: max-content;
+  }
+
   .collection-card-primary {
     height: 550px;
     width: 600px;
