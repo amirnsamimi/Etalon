@@ -84,10 +84,10 @@
   }
   99% {
     visibility: visible;
+    width: 100%;
   }
   100% {
     visibility: visible;
-    width: 100%;
   }
 }
 
@@ -98,10 +98,10 @@
   }
   99% {
     visibility: visible;
+    width: 100%;
   }
   100% {
     visibility: visible;
-    width: 100%;
   }
 }
 
