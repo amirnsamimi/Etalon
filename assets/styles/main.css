@@ -129,34 +129,32 @@
   left: 0;
 }
 
-#carousel-image-2 {
+#carousel-image-2,
+#carousel-image-control-2 {
   height: 360px;
   width: auto;
 }
 
 #carousel-image-1,
 #carousel-image-2,
-#carousel-image-3 {
+#carousel-image-3,
+#carousel-image-control-1,
+#carousel-image-control-2,
+#carousel-image-control-3 {
   visibility: hidden;
   transition: 500ms bottom, 1s opacity cubic-bezier(1, 0, 0, 1);
   opacity: 0;
   bottom: -100%;
 }
 
-.carousel-container:has(input[id="back-image-1"]:checked) #carousel-image-1,
 .carousel-container:has(input[id="carousel-image-1-active"]:checked)
-  #carousel-image-1,
-.carousel-container:has(input[id="to-image-1"]:checked) #carousel-image-1 {
+  #carousel-image-1 {
   visibility: visible;
   opacity: 1;
   bottom: 0;
 }
 
-.carousel-container:has(
-    input[id="back-image-2"]:checked,
-    input[id="carousel-image-2-active"]:checked,
-    input[id="to-image-2"]:checked
-  )
+.carousel-container:has(input[id="carousel-image-2-active"]:checked)
   #carousel-image-2 {
   visibility: visible;
   right: 0;
@@ -164,28 +162,8 @@
   bottom: 0;
 }
 
-.carousel-container:has(
-    input[id="back-image-2"]:checked,
-    input[id="carousel-image-2-active"]:checked,
-    input[id="to-image-2"]:checked
-  )
-  #carousel-image-1,
-.carousel-container:has(
-    input[id="back-image-2"]:checked,
-    input[id="carousel-image-2-active"]:checked,
-    input[id="to-image-2"]:checked
-  )
-  #carousel-image-3 {
-  visibility: hidden;
-  right: 0;
-  opacity: 1;
-  bottom: 0;
-}
-
 .carousel-container:has(input[id="carousel-image-3-active"]:checked)
-  #carousel-image-3,
-.carousel-container:has(input[id="back-image-3"]:checked) #carousel-image-3,
-.carousel-container:has(input[id="to-image-3"]:checked) #carousel-image-3 {
+  #carousel-image-3 {
   visibility: visible;
   opacity: 1;
   bottom: 0;
@@ -283,6 +261,67 @@
 .carousel-container:has(input[id="back-image-2"]:checked) #to-image-3-arrow,
 .carousel-container:has(input[id="back-image-2"]:checked) #back-image-1-arrow {
   display: inline;
+}
+
+/* you cannot control other elements without js so I use display for controling */
+
+.carousel-container:has(
+    input[id="carousel-image-3-active"]:checked,
+    input[id="carousel-image-2-active"]:checked,
+    input[id="carousel-image-1-active"]:checked
+  )
+  :is(
+    #carousel-image-control-2,
+    #carousel-image-control-3,
+    #carousel-image-control-1
+  ) {
+  visibility: hidden;
+  bottom: -100%;
+  opacity: 0;
+}
+
+.carousel-container:has(
+    input[id="to-image-1"]:checked,
+    input[id="to-image-2"]:checked,
+    input[id="to-image-3"]:checked,
+    input[id="back-image-1"]:checked,
+    input[id="back-image-2"]:checked,
+    input[id="back-image-3"]:checked
+  )
+  :is(#carousel-image-2, #carousel-image-3, #carousel-image-1) {
+  visibility: hidden;
+  bottom: -100%;
+  opacity: 0;
+}
+
+.carousel-container:has(
+    input[id="to-image-2"]:checked,
+    input[id="back-image-2"]:checked
+  )
+  #carousel-image-control-2 {
+  visibility: visible;
+  bottom: 0;
+  opacity: 1;
+}
+
+.carousel-container:has(
+    input[id="to-image-1"]:checked,
+    input[id="back-image-1"]:checked
+  )
+  #carousel-image-control-1 {
+  visibility: visible;
+  bottom: 0;
+  opacity: 1;
+}
+
+.carousel-container:has(
+    input[id="to-image-3"]:checked,
+    input[id="back-image-3"]:checked
+  )
+  #carousel-image-control-3 {
+  visibility: visible;
+  bottom: 0;
+  opacity: 1;
 }
 
 .carousel-container .carousel-controllers .arrow-right {
@@ -483,7 +522,8 @@
     left: auto;
   }
 
-  #carousel-image-2 {
+  #carousel-image-2,
+  #carousel-image-control-2 {
     height: 520px;
     width: auto;
   }
@@ -555,23 +595,35 @@
     font-size: 16px;
   }
 
-  .carousel-container:has(input[id="carousel-image-1-active"]:checked)
-    #carousel-image-1 {
+  .carousel-container:has(
+      input[id="carousel-image-1-active"]:checked,
+      input[id="to-image-1"]:checked,
+      input[id="back-image-1"]:checked
+    )
+    :is(#carousel-image-1, #carousel-image-control-1) {
     display: block;
     transform: translateX(25px);
     bottom: 0;
   }
 
-  .carousel-container:has(input[id="carousel-image-2-active"]:checked)
-    #carousel-image-2 {
+  .carousel-container:has(
+      input[id="carousel-image-2-active"]:checked,
+      input[id="to-image-2"]:checked,
+      input[id="back-image-2"]:checked
+    )
+    :is(#carousel-image-2, #carousel-image-control-2) {
     display: block;
     right: 0;
     bottom: 0;
     transform: translateX(75px);
   }
 
-  .carousel-container:has(input[id="carousel-image-3-active"]:checked)
-    #carousel-image-3 {
+  .carousel-container:has(
+      input[id="carousel-image-3-active"]:checked,
+      input[id="to-image-3"]:checked,
+      input[id="back-image-3"]:checked
+    )
+    :is(#carousel-image-3, #carousel-image-control-3) {
     display: block;
     bottom: 0;
   }
