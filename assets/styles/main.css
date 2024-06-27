@@ -52,6 +52,111 @@
   height: auto;
 }
 
+/* typewriter effect */
+.typewriter h1 {
+  color: var(--solid-white);
+  overflow: hidden;
+  border-right: 5px solid transparent;
+  white-space: nowrap;
+  letter-spacing: 0.25em;
+  width: max-content;
+  animation: typing 1s steps(15, end), blink-caret 1s step-end 1;
+  animation-fill-mode: forwards;
+}
+
+.typewriter h2 {
+  color: var(--solid-white);
+  overflow: hidden;
+  border-right: 5px solid transparent;
+  white-space: nowrap;
+  letter-spacing: 0.25em;
+  width: max-content;
+  animation: typing-2 1s steps(15, end), blink-caret-2 1s step-end 2;
+  animation-delay: 0.5s;
+  animation-fill-mode: forwards;
+}
+
+/* The typing effect */
+@keyframes typing {
+  0% {
+    visibility: hidden;
+    width: 0;
+  }
+  99% {
+    visibility: visible;
+    width: 100%;
+  }
+  100% {
+    visibility: visible;
+  }
+}
+
+@keyframes typing-2 {
+  0% {
+    visibility: hidden;
+    width: 0;
+  }
+  99% {
+    visibility: visible;
+    width: 100%;
+  }
+  100% {
+    visibility: visible;
+  }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: var(--pale-gold);
+  }
+  50% {
+    border-color: transparent;
+  }
+  100% {
+    border-color: transparent;
+    text-wrap: nowrap;
+    text-overflow: ellipsis;
+    width: 100%;
+  }
+}
+
+@keyframes blink-caret-2 {
+  from,
+  to {
+    border-color: var(--pale-gold);
+  }
+  50% {
+    border-color: transparent;
+  }
+  100% {
+    border-color: transparent;
+    text-wrap: wrap;
+    overflow-wrap: break-word;
+    width: 100%;
+  }
+}
+
+.carousel h1 {
+  overflow: hidden;
+  line-height: 1.5;
+}
+
+.carousel h2 {
+  overflow: hidden;
+}
+
+#image-1-text,
+#image-2-text,
+#image-3-text {
+  display: none;
+  visibility: none;
+  text-wrap: wrap;
+  overflow-wrap: break-word;
+  overflow: hidden;
+}
+
 .carousel-indicators {
   justify-content: center;
   width: 100%;
@@ -66,6 +171,40 @@
 
   z-index: 10;
 }
+
+.carousel-container:has(
+    input[id="carousel-image-1-active"]:checked,
+    input[id="back-image-1"]:checked,
+    input[id="to-image-1"]:checked
+  )
+  :is(#image-3-text) {
+  display: block;
+  visibility: hidden;
+  opacity: 1;
+}
+
+.carousel-container:has(
+    input[id="carousel-image-3-active"]:checked,
+    input[id="back-image-3"]:checked,
+    input[id="to-image-3"]:checked
+  )
+  :is(#image-1-text) {
+  display: block;
+  visibility: hidden;
+  opacity: 1;
+}
+
+.carousel-container:has(
+    input[id="carousel-image-2-active"]:checked,
+    input[id="back-image-2"]:checked,
+    input[id="to-image-2"]:checked
+  )
+  :is(#image-2-text) {
+  display: block;
+  visibility: hidden;
+  opacity: 1;
+}
+
 /* 
 .carousel-indicators ol {
   height: 16px;
@@ -116,7 +255,29 @@
   border-radius: 100px;
 }
 
-/* testing c-image */
+/* carousel pricing */
+
+#usd299,
+#usd399,
+#usd499,
+#off30,
+#off40,
+#off50 {
+  visibility: hidden;
+  opacity: 0;
+  transition: 500ms opacity;
+}
+
+.price-tag {
+  display: none;
+}
+
+.price-tag-transparent {
+  display: none;
+  z-index: 10;
+}
+
+/* carousel image */
 
 .carousel-image-container {
   width: 100%;
@@ -173,7 +334,7 @@
 
 .carousel-controllers {
   display: none;
-  z-index: 10;
+  z-index: 20;
   position: absolute;
   bottom: 32px;
   cursor: pointer;
@@ -484,17 +645,9 @@
   display: none;
 }
 
-.price-tag {
-  display: none;
-}
-
-.price-tag-transparent {
-  display: none;
-  z-index: 10;
-}
-
 @media screen and (min-width: 520px) {
-  .carousel h1 {
+  .carousel h1,
+  .carousel h2 {
     font-size: 6rem;
   }
 
@@ -522,6 +675,11 @@
     left: auto;
   }
 
+  .carousel h1,
+  .carousel h2 {
+    font-size: 8rem;
+  }
+
   #carousel-image-2,
   #carousel-image-control-2 {
     height: 520px;
@@ -542,10 +700,6 @@
 
   .carousel {
     padding-top: 5rem;
-  }
-
-  .carousel h1 {
-    font-size: 8rem;
   }
 
   .carousel-image {
@@ -650,6 +804,19 @@
     width: 600px;
   }
 
+  .carousel h1 {
+    text-wrap: nowrap;
+    overflow: hidden;
+    text-overflow: unset;
+    line-height: 1.5;
+  }
+
+  .carousel h2 {
+    hyphens: none;
+    overflow-wrap: normal;
+    text-wrap: nowrap;
+  }
+
   .carousel-image-container {
     min-width: 600px;
     min-height: 550px;
@@ -661,6 +828,39 @@
     right: 200px;
     top: 100px;
     z-index: 50;
+  }
+
+  .carousel-container:has(
+      input[id="carousel-image-1-active"]:checked,
+      input[id="back-image-1"]:checked,
+      input[id="to-image-1"]:checked
+    )
+    :is(#off50, #usd499) {
+    display: block;
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .carousel-container:has(
+      input[id="carousel-image-3-active"]:checked,
+      input[id="back-image-3"]:checked,
+      input[id="to-image-3"]:checked
+    )
+    :is(#off40, #usd299) {
+    display: block;
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .carousel-container:has(
+      input[id="carousel-image-2-active"]:checked,
+      input[id="back-image-2"]:checked,
+      input[id="to-image-2"]:checked
+    )
+    :is(#off30, #usd399) {
+    display: block;
+    visibility: visible;
+    opacity: 1;
   }
 
   .price-tag-transparent {
