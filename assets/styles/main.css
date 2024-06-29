@@ -665,6 +665,11 @@
     font-size: 6rem;
   }
 
+  .max-w-screen {
+    padding-right: 16px;
+    padding-left: 16px;
+  }
+
   .collection-container {
     flex-direction: row;
   }
